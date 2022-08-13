@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C#22545 - Tablas</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        thead{
+            background-color: lightslategray;
+        }
+
+        tfoot{
+            background-color: lightblue;
+            color: white;
+        }
+        caption{
+            font-weight: bold;
+        }
+
+    </style>
+    <!-- Tabla simple -->
+    <table>
+        <tr>
+            <td>Marta</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Enzo</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Claudia</td>
+            <td>6</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Tabla con encabezados -->
+    <table>
+        <caption>Calificaciones de alumnos</caption>
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: rgb(206, 206, 69) ;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Marta Gomez</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Enzo Davila</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Claudia Torrent</td>
+            <td>6</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Tabla traspuesta -->
+    <table>
+        <caption>Calificaciones de alumnos traspuesta</caption>
+        <tr>
+            <th>Nombre</th>
+            <td>Marta Gomez</td>
+            <td>Enzo Davila</td>
+            <td>Claudia Torrent</td>
+        </tr>
+        <tr>
+            <th>Nota 1</th>
+            <td>8</td>
+            <td>7</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>Nota 2</th>
+            <td>9</td>
+            <td>8</td>
+            <td>10</td>
+        </tr>
+
+    </table>
+    <br>
+
+    <!-- Tabla con colspan -->
+    <table>
+        <caption>Lista precios</caption>
+        <thead>
+        <tr>
+            <th>Articulo</th>
+            <th>Precio 1</th>
+            <th>Precio 2</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Azucar</td>
+            <td>$140</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Harina</td>
+            <td colspan="2" style="background-color: lightgreen;">$80</td>
+            
+        </tr>
+        <tr>
+            <td>Aceite</td>
+            <td>$230</td>
+            <td>$215</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Tabla con rowspan -->
+    <table>
+        <caption>Lista precios</caption>
+        <thead>
+        <tr>
+            <th>Articulo</th>
+            <th>Precio 1</th>
+            <th>Precio 2</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>Azucar</td>
+            <td>$140</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td>Harina</td>
+            <td>$80</td>
+            <td rowspan="2" style="background-color: lightgreen;">$95</td>
+        </tr>
+        <tr>
+            <td>Aceite</td>
+            <td>$230</td>
+            <!-- No hace falta escribir la 3ra celda -->
+        </tr>
+    </table>
+<br>
+<!-- Tabla con agrupamientos semanticos -->
+<table>
+    <caption>Calificaciones de alumnos</caption>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Marta Gomez</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Enzo Davila</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Claudia Torrent</td>
+            <td>6</td>
+            <td>10</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>Promedio</td>
+            <td>7.0</td>
+            <td>9.0</td>
+        </tr>
+    </tfoot>
+
+</table>
+<br>
+
+</body>
+</html>
+</body>
+</html>
