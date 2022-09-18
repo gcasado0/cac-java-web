@@ -1,0 +1,14 @@
+h3 {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
+
+body {
+    border: dashed 1px black;
+    margin: 0px;
+}
+
+#h3-2 {
+    border: dashed 3px blue;
+}
