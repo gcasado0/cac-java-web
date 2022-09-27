@@ -7,20 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Conferencia Bs As</title>
 </head>
-<body>
-
-    <div class="container-fluid">
-
+<body class="container-fluid">
         
         <!-- Menu -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./img/codoacodo.png" alt="" width="100"  class="d-inline-block align-text-center">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./img/codoacodo.png" alt="" width="150px"  class="d-inline-block align-text-center">
                 Conf Bs As
             </a>              
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ">
+                <ul class="navbar-nav fs-5">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
                     </li>
@@ -43,14 +40,18 @@
         </div>
         </nav>
         <!-- Encabezado -->
+        
         <div class="card bg-dark text-white">
-        <img src="./img/ba1.jpg" class="card-img" alt="edificio">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">Last updated 3 mins ago</p>
-        </div>
-        </div>    
+            <img src="img/ba1.jpg" alt="" class="card-img">            
+            <div class="card-img-overlay">
+                <h3 class="card-title">Conf Bs As</h3> 
+                <p class="card-text">Bs As llega por primera vez a Argentina. Un Evento para compartir con</p>
+                <p class="card-text">nuestra comunidad el conocimiento y experiencia de los expertos que </p>
+                <p class="card-text">están creando el futuro de Internet.</p>
+                <a class="btn btn-outline-light">Quiero ser orador</a>
+                <a class="btn btn-success">Comprar tickets</a>                              
+            </div>
+          </div>  
         <!-- Oradores -->
         <div class="row">
             <div class="col text-center m-2">
@@ -142,14 +143,23 @@
             </div>
             <div class="col-6">
                 <form>
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col">
                           <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
                         </div>
                         <div class="col">
                           <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
                         </div>
-                      </div>
+                    </div>
+                    <div class="input-group">                        
+                        <textarea id="basic-text" class="form-control fs-3" placeholder="Sobre qué quieres hablar" aria-label="With textarea"></textarea>                        
+                    </div>
+                    <div>
+                        <label for="basic-text" class="form-label">Recuerda incluir un título para tu charla</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-success fs-3">Enviar</button>
+                    </div>
                 </form>
             </div>
             <div class="col">
@@ -157,11 +167,22 @@
             </div>
         </div>
         <!-- footer -->
-        <div class="row">
-
+        <div class="row bg-secondary text-white m-3 fs-5 text-center" ">            
+            <table style="height: 150px;">
+                <tbody>
+                  <tr>
+                    <td class="align-middle">Preguntas frecuentes</td>
+                    <td class="align-middle">Contáctanos</td>
+                    <td class="align-middle">Prensa</td>
+                    <td class="align-middle">Conferencias</td>
+                    <td class="align-middle">Términos y condiciones</td>
+                    <td class="align-middle">Privacidad</td>
+                    <td class="align-middle">Estudiantes</td>                    
+                  </tr>
+                </tbody>
+              </table>
         </div>            
-                
-    </div>
+                    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
