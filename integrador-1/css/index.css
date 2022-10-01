@@ -1,0 +1,10 @@
+header {
+    background-image: url('../img/ba1.jpg');
+    background-repeat: no-repeat;      
+    background-size: cover;    
+  }
+
+footer {
+    height:140px; 
+    background-color: #1e5170;
+}
