@@ -41,43 +41,37 @@
     </header>
 
     <!-- descuentos -->
-    <div class="row justify-content-center my-4">    
-        <div class="col-auto">
-
-        </div>
-        <div class="col-3">
+    <div class="row justify-content-center my-4">
+        <div class="col-sm-4">
             <div class="card border-primary text-center" style="width: 18rem;">
                 <div class="card-body">
-                <h5 class="card-title">Estudiante</h5>
-                <p class="card-text">Tienen un descuento</p>
-                <p class="card-text">80%</p>
-                <p class="card-text">* presentar docuementación</p>                
+                    <h5 class="card-title "><strong>Estudiante</strong></h5>
+                    <p class="card-text">Tienen un descuento</p>
+                    <p class="card-text"><strong>80%</strong></p>
+                    <p class="card-text">* presentar docuementación</p>                
                 </div>
-            </div>
+            </div>            
         </div>
-        <div class="col-3">
+        <div class="col-sm-4">
             <div class="card border-success text-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Trainee</h5>
+                    <h5 class="card-title"><strong>Trainee</strong></h5>
                     <p class="card-text">Tienen un descuento</p>
-                    <p class="card-text">50%</p>
+                    <p class="card-text"><strong>50%</strong></p>
                     <p class="card-text">* presentar docuementación</p>                
                 </div>
             </div>
         </div>
-        <div class="col-3">                
+        <div class="col-sm-4">             
             <div class="card border-warning text-center" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Junior</h5>
+                    <h5 class="card-title"><strong>Junior</strong></h5>
                     <p class="card-text">Tienen un descuento</p>
-                    <p class="card-text">15%</p>
+                    <p class="card-text"><strong>15%</strong></p>
                     <p class="card-text">* presentar docuementación</p>                
                 </div>
             </div>
-        </div>            
-        <div class="col-auto">
-
-        </div>
+        </div>                    
     </div>
 
     <!-- form -->
@@ -108,30 +102,36 @@
                 <div class="row mb-3">
                     <div class="col">
                         <label for="cantidad">Cantidad</label>
-                        <input id="cantidad" name="cantidad" type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad">
+                        <input id="cantidad" name="cantidad" type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad">                        
                     </div>
                     <div class="col">                      
                         <label for="categoria">Categoria</label>
-                        <Select id="categoria" name="categoria" class="form-control">
-                            <option value="general">General</option>
+                        <Select class="form-select" id="categoria" name="categoria">
                             <option value="estudiante">Estudiante</option>
                             <option value="trainee">Trainee</option>
                             <option value="junior">Junior</option>
+                            <option value="general">General</option>
                         </Select>
                     </div>
                 </div>    
                 <div class="row mb-3">
                     <div class="col">
-                      <span>Total a Pagar: $</span>
-                      <span id="importe"></span>
+                      <div class="alert alert-primary" role="alert">                           
+                          <span>Total a Pagar: $</span>
+                          <span id="importe"></span>
+                      </div>
                     </div>                    
                 </div>                
                 <div class="row">
-                    <div class="col">     
-                        <button type="reset" class="btn btn-success fs-3">Borrar</button>
+                    <div class="col">    
+                        <div class="d-grid">
+                            <button type="reset" class="btn btn-success btn-sm">Borrar</button>
+                        </div>
                     </div>
                     <div class="col">     
-                        <button type="submit" class="btn btn-success fs-3">Resumen</button>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-sm">Resumen</button>
+                        </div>
                     </div>
                 </div>
             </form>
