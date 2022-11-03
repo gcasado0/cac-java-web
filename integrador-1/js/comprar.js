@@ -16,7 +16,7 @@ form.onsubmit = function(e) {
     if (cantidad.value === '' || categoria.value === '') {
 
 
-        resultado.textContent = 'Completá ambos datos!';
+        resultado.textContent = '';
 
     }else{
         var valor = 200;
