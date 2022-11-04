@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `cac-java` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci */;
+USE `cac-java`;
 -- MySQL dump 10.13  Distrib 5.7.40, for Linux (x86_64)
 --
 -- Host: 127.0.0.1    Database: cac-java
@@ -32,16 +34,6 @@ CREATE TABLE `persona` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `persona`
---
-
-LOCK TABLES `persona` WRITE;
-/*!40000 ALTER TABLE `persona` DISABLE KEYS */;
-INSERT INTO `persona` VALUES (18,'Gustavo','Casado',50,'2022-11-04 18:37:22','Santa Fe'),(19,'Oscar','Casado',83,'2022-11-04 18:37:22','Santa Fe'),(20,'Liliana','Gonzalez',76,'2022-11-04 18:37:22','Santa Fe'),(21,'Celeste','Casado',41,'2022-11-04 18:37:22','Santa Fe'),(22,'Cecilia','Casado',51,'2022-11-04 18:37:22','Santa Fe');
-/*!40000 ALTER TABLE `persona` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -52,4 +44,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-04 15:40:57
+-- Dump completed on 2022-11-04 15:51:40
