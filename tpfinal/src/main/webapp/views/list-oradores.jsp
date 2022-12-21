@@ -9,4 +9,6 @@
 <h1> Lista de Oradores </h1>
 
 
+<a class="nav-link" href="<%=request.getContextPath()%>/views/add-orador.jsp">Agregar</a>
+
 <%@include file="/views/partials/footer.jsp" %>

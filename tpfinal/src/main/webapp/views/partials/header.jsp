@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="/tpfinal/css/index.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/index.css">
     <title>Conferencia Bs As</title>
 </head>
 <body class="container min-vh-100">        
@@ -21,8 +21,8 @@
         <!-- Menu -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="/tpfinal/">
-                <img src="/tpfinal/img/codoacodo.png" alt="" width="150px"  class="d-inline-block align-text-center">
+            <a class="navbar-brand fw-bold" href="<%=request.getContextPath()%>/">
+                <img src="<%=request.getContextPath()%>/img/codoacodo.png" alt="" width="150px"  class="d-inline-block align-text-center">
                 Sistema Gestión de Conferencias
             </a>          
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
