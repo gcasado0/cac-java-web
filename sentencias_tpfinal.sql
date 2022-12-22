@@ -11,6 +11,6 @@ CREATE TABLE `orador` (
   `apellido` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
   `titulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `resumen` varchar(1000) COLLATE utf8_spanish_ci NOT NULL,
-  `fecha` date NOT NULL,  
+  `inicio` date NOT NULL,  
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;

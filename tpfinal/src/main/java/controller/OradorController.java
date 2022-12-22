@@ -1,9 +1,11 @@
 package controller;
 
+//import database.OradorDAO;
 import database.OradorDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
+import java.util.List;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Orador;
 
 /**
@@ -32,9 +35,10 @@ public class OradorController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        PrintWriter out = response.getWriter();
+        try {
             String action = request.getPathInfo();
-            
+            OradorDAO odao = new OradorDAO();
             switch (action) {
                 case "/create":
                     String nombre = request.getParameter("nombre");
@@ -42,14 +46,33 @@ public class OradorController extends HttpServlet {
                     String titulo = request.getParameter("titulo");
                     String resumen = request.getParameter("resumen");
                     String inicio = request.getParameter("inicio");
-                    Orador o = new Orador(0L,nombre, apellido, titulo, resumen, inicio);
-                    OradorDAO o1 = new OradorDAO();
-                    o1.createOrador(o);
-                    
-                break;
+                    Orador o = new Orador(0L,nombre, apellido, titulo, resumen, inicio);                    
+                    int salida = odao.createOrador(o);
+                    if (salida>0){
+                        //actualizar lista de oradores en sesion
+                        HttpSession session = request.getSession();
+                        session.setAttribute("oradores", odao.getAll());                        
+                        //asi esta jsp puede mostrar la lista de oradores actualizada
+                        response.sendRedirect(request.getContextPath()+"/views/list-oradores.jsp");
+                    }                    
+                    break;  
+                case "/list":                    
+                    HttpSession session = request.getSession();
+                    session.setAttribute("oradores", odao.getAll());        
+                    response.sendRedirect(request.getContextPath()+"/views/list-oradores.jsp");
             }
             
-        } catch (SQLException ex) {
+        } catch (Exception ex) {
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet prueba</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet prueba at " + request.getContextPath() + "</h1>");
+            out.println("<h2>Error: " + ex.getMessage() + "</h2>");
+            out.println("</body>");
+            out.println("</html>");
             Logger.getLogger(OradorController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

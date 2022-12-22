@@ -1,4 +1,4 @@
-package config;
+package com.mycompany.dbtest;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 /**
  *
- * @author gcasado0
+ * @author jose
  */
-public class DBconn {
+public class DBConn {
     private String driver = "com.mysql.cj.jdbc.Driver";
     private String server = "localhost";
     private String host = "jdbc:mysql://" + server + ":3306/";
@@ -18,7 +18,7 @@ public class DBconn {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(host + database, userDB, passwordDB);
-        } catch( ClassNotFoundException | SQLException error) {
+        } catch( ClassNotFoundException | SQLException error) { // ClassNotFoundException |
             error.printStackTrace();
         }
         return conn;
