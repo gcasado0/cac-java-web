@@ -18,6 +18,7 @@
       <th scope="col">Apellido</th>
       <th scope="col">Título</th>
       <th scope="col">Inicio</th>
+      <th scope="col">Resumen</th>
       <th scope="col">Acción</th>
     </tr>
   </thead>
@@ -35,8 +36,10 @@
             <td><%=o.getApellido()%></td>
             <td><%=o.getTitulo()%></td>
             <td><%=o.getInicio()%></td>
-            <td><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="btn btn-primary" href="<%=request.getContextPath()%>/orador/view?id=<%=o.getId()%>">Editar</a>
+            <td><%=o.getResumen()%></td>
+            <td>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a class="btn btn-primary" href="<%=request.getContextPath()%>/orador/edit?id=<%=o.getId()%>">Editar</a>
                 <a class="btn btn-secondary" href="<%=request.getContextPath()%>/orador/delete?id=<%=o.getId()%>">Eliminar</a>
                 </div>
             </td>

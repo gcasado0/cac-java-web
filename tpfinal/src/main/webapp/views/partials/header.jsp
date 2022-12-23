@@ -19,7 +19,7 @@
 <body class="container min-vh-100">        
     <header>
         <!-- Menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary ">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="<%=request.getContextPath()%>/">
                 <img src="<%=request.getContextPath()%>/img/codoacodo.png" alt="" width="150px"  class="d-inline-block align-text-center">

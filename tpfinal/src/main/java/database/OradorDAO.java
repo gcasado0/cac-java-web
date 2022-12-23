@@ -84,5 +84,57 @@ public class OradorDAO {
         
         return oradores;
     }
+
+    public Orador getById(Long id) throws SQLException {
+        PreparedStatement ps;
+        ResultSet rs;
+        Orador o = null;
+
+        ps = conexion.prepareStatement("SELECT * FROM orador WHERE id = ?");
+        ps.setLong(1, id);
+
+        rs = ps.executeQuery();
+
+        if(rs.next()) {            
+            String nombre = rs.getString("nombre");
+            String apellido = rs.getString("apellido");
+            String titulo = rs.getString("titulo");
+            String resumen = rs.getString("resumen");
+            String inicio = rs.getString("inicio");
+            o = new Orador(id,nombre, apellido, titulo, resumen, inicio);                  
+        }
+        return o;
+    }
+
+    public int updateOrador(Orador o) throws SQLException {
+        PreparedStatement ps;
+        int lineasAfectadas;
+        
+        String pQuery = "UPDATE orador SET nombre = ?, apellido = ?, titulo = ?, inicio = ?, resumen = ?"
+                + " WHERE id = ?;";
+        ps = conexion.prepareStatement(pQuery);
+        
+        ps.setString(1, o.getNombre());
+        ps.setString(2,o.getApellido());
+        ps.setString(3, o.getTitulo());
+        ps.setString(4, o.getInicio());
+        ps.setString(5, o.getResumen());
+        ps.setLong(6, o.getId());
+         
+        lineasAfectadas = ps.executeUpdate();
+        return lineasAfectadas;
+    }
+
+    public int deleteOrador(Long id) throws SQLException {
+        PreparedStatement ps;
+        int lineasAfectadas;
+        
+        String pQuery = "DELETE FROM orador WHERE id = ?;";
+        ps = conexion.prepareStatement(pQuery);
+        
+        ps.setLong(1, id);
+        lineasAfectadas = ps.executeUpdate();
+        return lineasAfectadas;
+    }
     
 }
